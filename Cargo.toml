@@ -1,7 +1,8 @@
 [package]
 name = "block-entries-service"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
+license = "AGPL-3.0-only"
 
 [dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
