@@ -32,10 +32,9 @@ impl RpcRequestHandler {
         ledger: &Ledger
     ) -> Result<Value> {
         let slot = parse_slot_param(params)?;
-        // 1) Read the slot entries from the ledger
+
         let entries = ledger.read_slot_entries(slot)?;
 
-        // 2) Convert to JSON
         Ok(to_value(entries)?)
     }
 }
